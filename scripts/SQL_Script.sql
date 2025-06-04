@@ -1,26 +1,26 @@
 
 CREATE TABLE Comunidad (
     ID_Comunidad INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(100)
+    Nombre VARCHAR(255)
 );
 
 CREATE TABLE Provincia (
     ID_Provincia INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ID_Comunidad INT,
-    Nombre VARCHAR(100),
+    Nombre VARCHAR(255),
     FOREIGN KEY (ID_Comunidad) REFERENCES Comunidad(ID_Comunidad)
 );
 
 CREATE TABLE Partido (
     ID_Partido INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(100),
-    Siglas VARCHAR(20)
+    Nombre VARCHAR(255),
+    Siglas VARCHAR(255)
 );
 
 CREATE TABLE Elecciones (
     ID_Elecciones INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Anio INT,
-    Tipo VARCHAR(50)
+    Tipo VARCHAR(100)
 );
 
 CREATE TABLE Resultados (
